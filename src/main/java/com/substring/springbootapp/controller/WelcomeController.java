@@ -13,7 +13,7 @@ public class WelcomeController {
 
     @GetMapping
     public ResponseEntity<String> welcome(){
-        return ResponseEntity.ok("Welcome to spring boot app!");
+        return ResponseEntity.ok("Welcome to boss Home!");
     }
 
     @GetMapping("/users")
