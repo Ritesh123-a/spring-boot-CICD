@@ -23,8 +23,10 @@ jobs:
           java-version: 21
           cache: maven
 
-      - name: Build Jar
-        run: ./mvnw clean package -DskipTests
+      -  name: Build Jar
+         run: |
+              chmod +x mvnw
+              ./mvnw clean package -DskipTests
 
       - name: Building Docker Image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest .
